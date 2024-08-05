@@ -22,4 +22,26 @@ ddfb50ba1977: Pull complete
 91b87d81d4c8: Pull complete 
 Digest: sha256:65438c2e26dbf9f5db4b5553e332747fa20722c1b7c7ccc6f8480396ff4186db
 Status: Downloaded newer image for python:3.9
-docker.io/library/python:3.9
+docker.io/library/python:3.
+
+## Ejecutar contenedor
+
+@JuanDavid2221 ➜ /workspaces/labs-docker-dev (main) $ docker run -d -p 8000:80 httpd
+Unable to find image 'httpd:latest' locally
+latest: Pulling from library/httpd
+efc2b5ad9eec: Pull complete 
+fce1785eb819: Pull complete 
+4f4fb700ef54: Pull complete 
+f214daa0692f: Pull complete 
+05383fd8b2b3: Pull complete 
+88ad12232aa1: Pull complete 
+Digest: sha256:932ac36fabe1d2103ed3edbe66224ed2afe0041b317bcdb6f5d9be63594f0030
+Status: Downloaded newer image for httpd:latest
+1f5c0bcdce3ab2024ca56d0aa434eaaa121117ec98349bd29a6639ab9a43e3ff
+ 
+ ## Contenedor de Ubuntu 
+
+ @JuanDavid2221 ➜ /workspaces/labs-docker-dev (main) $ docker run -it ubuntu bash
+root@83bf65b5a87a:/# ls -a
+.  ..  .dockerenv  bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@83bf65b5a87a:/# 
