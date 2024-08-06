@@ -45,3 +45,22 @@ Status: Downloaded newer image for httpd:latest
 root@83bf65b5a87a:/# ls -a
 .  ..  .dockerenv  bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 root@83bf65b5a87a:/# 
+
+## Eliminar contenedores
+
+@JuanDavid2221 ➜ /workspaces/labs-docker-dev (main) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND              CREATED          STATUS                        PORTS                                   NAMES
+83bf65b5a87a   ubuntu    "bash"               24 minutes ago   Exited (129) 15 seconds ago                                           trusting_edison
+14bd9faa34cd   httpd     "httpd-foreground"   24 minutes ago   Created                                                               infallible_zhukovsky
+1f5c0bcdce3a   httpd     "httpd-foreground"   28 minutes ago   Up 28 minutes                 0.0.0.0:8000->80/tcp, :::8000->80/tcp   awesome_meninsky
+b9a8a324fd37   ubuntu    "bash"               30 minutes ago   Exited (129) 28 minutes ago                                           competent_engelbart
+@JuanDavid2221 ➜ /workspaces/labs-docker-dev (main) $ docker rm 83bf65b5a87a
+83bf65b5a87a
+@JuanDavid2221 ➜ /workspaces/labs-docker-dev (main) $ docker container prune
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+14bd9faa34cd9965b8f0875659bcb1b32d68f28d2c0d4663c3dc20d5ca1b042f
+b9a8a324fd379cc92eae970cb1b30d292cc4e106f49cf505a86a3662150317a1
+
+Total reclaimed space: 88B
